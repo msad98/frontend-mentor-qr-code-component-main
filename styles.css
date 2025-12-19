@@ -1,8 +1,14 @@
+:root {
+  --background-color: hsl(212, 45%, 89%);
+  --card-color: white;
+  --text-color: #393950;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
-  background-color: hsl(212, 45%, 89%);
+  background-color: var(--background-color);
   font-family: "Arial", sans-serif;
   padding: 16px;
   display: flex;
@@ -17,15 +23,19 @@ body {
   border-radius: 16px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 300px;
-  background-color: white;
+  max-width: 250px;
+  background-color: var(--card-color);
   text-align: center;
+
+  @media (max-width: 400px) {
+    max-width: 90%;
+  }
 }
 
 .card-text {
   text-align: center;
   padding: 10px;
-  color: #393950;
+  color: var(--text-color);
 }
 
 img {
